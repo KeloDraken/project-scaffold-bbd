@@ -1,12 +1,13 @@
-package com.levelUpTwo.project_scaffolding;
+package com.levelUp2.project_scaffolding_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjectscaffoldapiApplication {
+public class ProjectScaffoldingServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjectscaffoldapiApplication.class, args);
+		SpringApplication.run(ProjectScaffoldingServerApplication.class, args);
 	}
+
 }

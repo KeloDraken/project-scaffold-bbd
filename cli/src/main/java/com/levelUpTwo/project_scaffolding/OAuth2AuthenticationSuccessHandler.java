@@ -30,11 +30,8 @@ public class OAuth2AuthenticationSuccessHandler implements AuthenticationSuccess
                 oauthToken.getAuthorizedClientRegistrationId(),
                 oauthToken.getName()
         );
-        System.out.println(authorizedClient.toString());
                                     
-        String accessToken = authorizedClient.getAccessToken().getTokenValue();
-        request.getSession().setAttribute("ACCESS_TOKEN", accessToken);
-
-        response.sendRedirect("/api/protected");
+        ProjectscaffoldapiApplication.AccessToken = authorizedClient.getAccessToken().getTokenValue();
+        ProjectscaffoldapiApplication.RefreshToken = authorizedClient.getRefreshToken().getTokenValue();
     }
 }
